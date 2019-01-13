@@ -97,3 +97,21 @@ ul li a {
     body { 
         font-family: Montserrat,sans-serif;
     }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(34,126,247,.07);
+        background-color: rgba(34, 126, 247, 0.07);
+        margin-bottom: 20px;
+    }
+    .secondary-bg {
+        background-color: #041029;
+        color: #eee;
+        font-size: 25px;
+    }            
