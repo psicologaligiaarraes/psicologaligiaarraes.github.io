@@ -1,6 +1,9 @@
-.label-contato {
-    font-size: 15px;
-    font-weight: 400;
-    color: #a6a7aa;
-    margin-bottom:5px;
-}
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
