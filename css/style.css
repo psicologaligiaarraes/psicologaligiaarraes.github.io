@@ -24,3 +24,10 @@
     color: #fff;
     font-size: 25px;
 }            
+.carousel-texto {
+    background-color:black; 
+    opacity:0.5; 
+    color:#fff; 
+    border-radius:8px;
+    padding: 5px;
+}
