@@ -108,6 +108,7 @@
 </section>
 
 
+
 <section>
   <div class="container">
     <br>
@@ -142,7 +143,7 @@
   
     <h3>Como é feito o pagamento?</h3>
     <p>Pode ser feito por transferência bancária, boleto ou por cartão, através do PagSeguro.</p>
-  
+    <br>
   
   
   </div>
@@ -153,12 +154,73 @@
 </section>
 
 
-<br>
 
-<!-- <div class="container text-center">
-    <a href="agendar" class="btn btn-success">Marcar Atendimento Online</a>
-</div>
-<br> -->
+
+<section class="bg-primary">
+    <div class="container">
+        <br>
+        <div class="row text-center">
+          <div class="col-md-12">
+            <div id="forms" class="col-md-auto">
+                <h4 class="text-light">Adquirir Sessões de Atendimento Psicológico Online</h4>
+                <div class="text-center">
+                    <!-- <label class="control-label col-sm-4 text-light">Escolha uma opção:</label> -->
+                    <select id="seleciona" class="form-control">
+                        <option selected="selected" value="">Escolha uma opção</option>
+                        <option value="form1">1 sessão por R$ 50,00</option>
+                        <option value="form2">2 sessões por R$ 95,00</option>
+                        <option value="form3">3 sessões por R$ 140,00</option>
+                        <option value="form4">4 sessões por R$ 180,00</option>
+                        <option value="form5">10 sessões por R$ 450,00</option>
+                    </select>
+                </div>
+                <br>
+                <span id="form1">
+                    <h6 class="text-light"><strong>1 sessão</strong></h6>
+                    <a href="https://pag.ae/7UBQTi4w5" target="_blank">
+                        <img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif"
+                            alt="">
+                    </a>
+                </span>
+                <span id="form2">
+                    <h6 class="text-light"><strong>2 sessões</strong></h6>
+                    <a href="https://pag.ae/7UBQTv4Vq" target="_blank">
+                        <img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif"
+                            alt="">
+                    </a>
+                </span>
+                <span id="form3">
+                    <h6 class="text-light"><strong>3 sessões</strong></h6>
+                    <a href="https://pag.ae/7UBQTDzeq" target="_blank">
+                        <img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif"
+                            alt="">
+                    </a>
+                </span>
+                <span id="form4">
+                    <h6 class="text-light"><strong>4 sessões</strong></h6>
+                    <a href="https://pag.ae/7UBQTRHS4" target="_blank">
+                        <img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif"
+                            alt="">
+                    </a>
+                </span>
+                <span id="form5">
+                    <h6 class="text-light"><strong>10 sessões</strong></h6>
+                    <a href="https://pag.ae/7UBQUanep" target="_blank">
+                        <img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif"
+                            alt="">
+                    </a>
+                </span>
+
+                <br>
+                <p class="text-light">* Se preferir pagar por transferência bancária no <strong>Banco do Brasil</strong> me mande uma mensagem.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+
 
 <section class="bg-dark">
     <div class="container text-center ">
@@ -192,7 +254,15 @@
           </form>
       <br>
     </div>
-    </section>
+</section>
+
+
+
+<!-- <div class="container text-center">
+    <a href="agendar" class="btn btn-success">Marcar Atendimento Online</a>
+</div>
+<br> -->
+
     
 
 
@@ -240,8 +310,9 @@
           <!-- jQuery first, then Popper.js, then Bootstrap JS -->
           <script src="js/jquery-3.2.1.slim.min.js"></script>
           <script src="js/popper.min.js"></script>
-          <script src="js/bootstrap.min.js"></script>
-      
+          <script src="js/bootstrap.min.js"></script>      
+        
+
           <!-- WhatsHelp.io widget -->
           <script type="text/javascript">
             (function () {
@@ -260,6 +331,23 @@
             })();
         </script>
         <!-- /WhatsHelp.io widget -->
-      
+
+        
+        <script>		
+                $(document).ready(function(){
+                    $("#forms span").hide();
+                    //$('#form1').show("slow");
+        
+                    $('#seleciona').change(function() {
+                    var selecao = $('#seleciona').val();
+                        $("#forms span").hide();
+                        //alert('#' + selecao);
+                        $('#' + selecao).show();
+                    });	
+                    
+                });		
+        </script>
+        
+
         </body>
       </html>
