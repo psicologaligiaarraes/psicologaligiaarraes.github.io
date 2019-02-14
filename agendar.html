@@ -148,7 +148,7 @@
                                                                   </div>
                                                                 <div class="media-body">
                                                                     <h5 class="media-heading"><strong>Passo 3:</strong></h5>
-                                                                    As informações sobre valores serão enviadas no seu e-mail ou telefone
+                                                                    As informações sobre valores/pagamento serão enviadas no seu e-mail ou telefone
                                                                 </div>
                                                             </div>
                                                               </li>
@@ -215,8 +215,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="label-telefone" for="telefone">Telefone ou WhatsApp</label>                                                                
-                                    <input id="telefone" type="text" class="form-control" name="telefone" required >
+                                    <input id="telefone" type="text" class="form-control telefone" name="telefone" required >
                                 </div>            
+
+                                <!-- <div class="form-group">
+                                    <label for="quantidade">Quantidade de sessões</label>                                                                
+                                    <select id="quantidade" name="quantidade" required class="form-control">
+                                        <option selected="selected" value="">Escolha uma opção</option>
+                                        <option value="1 sessão por R$ 50,00">1 sessão por R$ 50,00</option>
+                                        <option value="2 sessões por R$ 95,00">2 sessões por R$ 95,00</option>
+                                        <option value="3 sessões por R$ 140,00">3 sessões por R$ 140,00</option>
+                                        <option value="4 sessões por R$ 180,00">4 sessões por R$ 180,00</option>
+                                        <option value="10 sessões por R$ 450,00">10 sessões por R$ 450,00</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                        <label for="forma-pagamento">Forma de Pagamento</label>                                                                
+                                        <select id="forma-pagamento" name="forma-pagamento" required class="form-control">
+                                            <option selected="selected" value="">Escolha uma opção</option>
+                                            <option value="Transferência Bancária">Transferência Bancária (Banco do Brasil)</option>
+                                            <option value="PagSeguro (Boleto ou Cartão em até 18x)">PagSeguro (Boleto ou Cartão em até 18x)</option>
+                                        </select>
+                                </div> -->
+
                                 <!-- <div class="form-group">
                                         <label class="label-tipo" for="tipo">Tipo de atendimento</label>                                                                
                                         <select name="tipo" required id="tipo" class="form-control">
@@ -315,6 +337,13 @@
                     })();
                 </script>
                 <!-- /WhatsHelp.io widget -->
-              
-                </body>
-              </html>
+
+                <script src="js/jquery.mask.js"></script>
+                <script>
+                  $(document).ready(function(){
+                    $('.telefone').mask('(00) 00000-0000');
+                  });  
+                </script>
+
+    </body>
+</html>
