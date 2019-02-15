@@ -73,7 +73,7 @@
 
   <div class="d-flex justify-content-center">
       <div class="carousel-texto text-center">
-          <h1 class="text-light text-center">Atendimento Online</h1> 
+          <h3 class="text-light text-center">Atendimento Online</h3> 
       </div>
   </div>
   <br>
@@ -89,12 +89,12 @@
     
 
                 <div class="col-sm-4"><i class="fa fa-globe icon secondary-bg "></i>
-                    <h3 class="bold primary-color">Atendimento Online</h3>
+                    <h1 class="bold primary-color">Psicóloga Online</h1>
                     <p class="paragraph white-color">Atendimento Psicológico Online via Chat, Skype ou Whatsapp</p>
                 </div>
                 <div class="col-sm-4"><i class="fa fa-calendar icon secondary-bg "></i>
                     <h3 class="bold primary-color">Agendamento Fácil</h3>
-                    <p class="paragraph white-color">É simples para agendar. Faça o agendamento pelo site e aguarde a confirmação.</p>
+                    <p class="paragraph white-color">É simples para agendar. Faça o agendamento pelo site e aguarde a as informações.</p>
                 </div>
                 <div class="col-sm-4"><i class="fa fa-star icon secondary-bg "></i>
                     <h3 class="bold primary-color">Aprovado pelo CFP</h3>
@@ -244,7 +244,7 @@
             <input id="contato" type="email" class="form-control" required name="contato" placeholder="Informe seu e-mail">
           </div>
           <div class="col-md-3">
-            <input id="telefone" type="tel" class="form-control" name="telefone" required placeholder="Telefone (XX) XXXXX-XXXX">
+            <input id="telefone" type="tel" class="form-control telefone" name="telefone" required placeholder="Telefone (XX) XXXXX-XXXX">
           </div>
               
             <div class="col-md-3">
@@ -350,7 +350,12 @@
                     
                 });		
         </script>
-        
+        <script src="js/jquery.mask.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.telefone').mask('(00) 00000-0000');
+            });  
+        </script>        
 
         </body>
       </html>

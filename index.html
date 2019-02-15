@@ -71,7 +71,7 @@
             <div class="carousel-texto">
               <h3 class="text-light">Atendimento Online</h3>
               <p class="lead d-none d-lg-block">Seja atendido online, sem precisar ir até o consultório</p>
-              <a href="terapia-online" class="btn btn-success">Saiba Mais</a>
+              <a href="terapia-online" class="btn btn-light">Saiba Mais</a>
             </div>
           </div>
         </div>      
@@ -81,7 +81,7 @@
           <div class="carousel-texto">
             <h3 class="text-light">Projeto Pense Magro</h3> 
             <p class="lead d-none d-lg-block">Emagrecer sem dietas restritivas, baseado no comportamento alimentar</p> 
-            <a href="pense-magro" class="btn btn-success">Saiba mais</a>
+            <a href="pense-magro" class="btn btn-light">Saiba mais</a>
           </div>
         </div>
       </div>
@@ -116,10 +116,9 @@
                 <p>Atuo na Abordagem Teoria Cognitivo Comportamental, atendendo <a href="atendimento-presencial">presencialmente</a> em Campo Grande-MS e <a href="terapia-online">online</a>.
                 <!-- <br>Quer saber mais sobre os atendimentos? <a href="terapia-online">clique aqui</a> -->
                 </p>
-                <a href="terapia-online" class="btn btn-success">Saiba mais sobre Atendimento Online</a>
-                <br>
-                <p>Use o formulário abaixo se quiser agendar um atendimento.</p>
-		<p>Aguardo seu contato!</p>
+                <p><a href="terapia-online" class="btn btn-success">Saiba mais sobre Atendimento Online</a></p>
+                <p>Use o formulário abaixo para marcar um atendimento online.</p>
+		            <p>Aguardo seu contato!</p>
 
                 <div class="text-center">
 
@@ -162,7 +161,7 @@
         <input id="contato" type="email" class="form-control" required name="contato" placeholder="Informe seu e-mail">
       </div>
       <div class="col-md-3">
-        <input id="telefone" type="tel" class="form-control" name="telefone" required  placeholder="Telefone (XX) XXXXX-XXXX">
+        <input id="telefone" type="tel" class="form-control telefone" name="telefone" required  placeholder="Telefone (XX) XXXXX-XXXX">
       </div>
       <div class="col-md-3">
         <input class="btn btn-success mb-2" type="submit" value="Agendar Atendimento">
@@ -243,6 +242,13 @@
       })();
   </script>
   <!-- /WhatsHelp.io widget -->
+
+  <script src="js/jquery.mask.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.telefone').mask('(00) 00000-0000');
+    });  
+  </script>
 
   </body>
 </html>
