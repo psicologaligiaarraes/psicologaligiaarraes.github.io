@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Psicóloga Ligia Arraes Maciel - Terapia Online" name="description" />
+    <meta content="Psicóloga Ligia Arraes Maciel" name="author" />
+    
+    <link rel="stylesheet" href="css/minty-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" integrity="sha384-DmABxgPhJN5jlTwituIyzIUk6oqyzf3+XuP7q3VfcWA2unxgim7OSSZKKf0KSsnh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Psicóloga Ligia Arraes | Atendimento Presencial e Online</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+
+    <!-- Event snippet for Inscreveu no formulario de contato conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-1009960382/2-1oCJPrz5MBEL6Ly-ED'}); </script> 
+
+</head>
+<script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-125855371-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    
+  <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+                <div class="container">
+                  <a class="navbar-brand" href="/">Psicóloga Ligia Arraes</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                      <!-- <li class="nav-item">
+                          <a class="nav-link" href="atendimento-presencial">Atendimento Presencial</a>
+                      </li>          
+                      <li class="nav-item">
+                        <a class="nav-link" href="terapia-online">Atendimento Online</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pense-magro">Projeto Pense Magro</a>
+                      </li>        
+                      <li class="nav-item">
+                        <a class="nav-link" href="agendar"><strong>Marcar Atendimento</strong></a>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <br>
+              <br>
+              <br>
+  <div class="container">
+          
+      <div class="margin-b-30">
+          <h3>Escolha o horário de atendimento</h3>
+          <!-- <h5>Este horário segue o horário de Campo Grande (-4) que é uma hora a menos que o horário de Brasilia.</h5> -->
+          <p class="alert alert-secondary">Este horário segue o horário de Campo Grande (-4) que é uma hora a menos que o horário de Brasilia.</p>
+      </div>
+      <br>
+    <!-- <div class="alert alert-secondary">Escolha o melhor dia/horário para seu atendimento:</div> -->
+            <div class="row">
+                <!-- <div class="col-sm-6 sm-margin-b-60"> -->
+                <div class="col-sm-12">
+                    
+
+                    <label for="dia">Selecione o dia</label>
+                <select class="form-control" name="dia" id="dia">
+                    <option value="">Selecione o dia</option>
+                    <option value="2019-02-01"><script>document.write(new Date())</script></option>
+                </select>
+                <div id='form'></div>
+                    
+
+                    <!-- <ul class="list-inline">
+                        <li><a href="/" class="btn btn-info">Voltar</a></li>
+                    </ul> -->
+                </div>
+                <div class="col-sm-6">
+                    <div class="promo-block-img-wrap">
+                        <!-- <img class="promo-block-img img-responsive" src="img/mockup/avatar-01.png" align="Avatar"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function() {
+
+            $("#dia").change(function(){
+                if($(this).val()=='') {
+                    $('#form').html('');
+                }
+                $.getJSON("https://script.google.com/macros/s/AKfycbxv9uTrRCh068GaYchh3t4qDi43s5SakaXFe1BCzqKqQQ8qHioB/exec", { data: $(this).val() }, function (data) {
+
+                    var form = '<form action="https://formspree.io/joaofelipern@gmail.com" method="POST">';
+
+                    // <input type="hidden" name="_subject" value="Agendamento de Horário" />
+                    // <input type="hidden" name="_language" value="pt-BR" />
+                    // <input type="hidden" name="_format" value="plain" />
+                    // <input type="hidden" name="_next" value="http://www.psicologaligiaarraes.com.br/mensagem_enviada.html" />
+
+                    form = form + '<br/><label>Selecione o horário</label><br/>';
+                    $.each(data, function (i, item) {
+                        //console.log(item);
+                        form = form + '<input type="radio" name=' + item.toString() + '>' + item.toString().split('-')[3] + '</input><br/>';
+                    });
+                    //console.log(data);
+                    form = form + '<input class="btn btn-success mb-2" type="submit" value="Agendar">';
+                    form = form + '</form>';
+                    //alert(form);
+
+                    $('#form').html(form);
+
+                });        
+            });        
+        });
+    </script>
+
+    <!-- WhatsHelp.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "1999990686932284", // Facebook page ID
+                whatsapp: "+5567999143715", // WhatsApp number
+                call_to_action: "Oi! Precisando de ajuda?", // Call to action
+                button_color: "#FF6550", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "facebook,whatsapp", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /WhatsHelp.io widget -->
+  
+
+  </body>
+</html>
