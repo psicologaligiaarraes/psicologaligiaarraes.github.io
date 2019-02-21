@@ -63,56 +63,76 @@
       <div class="margin-b-30">
           <h3>Escolha o horário de atendimento</h3>
           <!-- <h5>Este horário segue o horário de Campo Grande (-4) que é uma hora a menos que o horário de Brasilia.</h5> -->
-          <p class="alert alert-secondary">Este horário segue o horário de Campo Grande (-4) que é uma hora a menos que o horário de Brasilia.</p>
+          <p class="alert alert-secondary">Este horário segue o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>
       </div>
-      <br>
     <!-- <div class="alert alert-secondary">Escolha o melhor dia/horário para seu atendimento:</div> -->
             <div class="row">
                 <!-- <div class="col-sm-6 sm-margin-b-60"> -->
-                <div class="col-sm-12">
-                    
+                <div class="col-sm-12">                    
+
+                <form action="https://formspree.io/joaofelipern@gmail.com" method="POST">
+                
+                    <input type="hidden" name="_subject" value="Agendamento de Horário" />
+                    <input type="hidden" name="_language" value="pt-BR" />
+                    <input type="hidden" name="_format" value="plain" />
+                    <input type="hidden" name="_next" value="http://www.psicologaligiaarraes.com.br/" />
+                    <div class="form-group">
+                        <label class="label-contato" for="nome">Nome</label>                                
+                        <input id="nome" type="text" class="form-control" required name="nome" />                                
+                    </div>                                    
+                    <div class="form-group">
+                        <label class="label-contato" for="email">E-mail</label>                                                                
+                        <input id="email" type="email" class="form-control" required name="_replyto">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-telefone" for="telefone">Telefone ou WhatsApp</label>                                                                
+                        <input id="telefone" type="text" class="form-control telefone" name="telefone" required >
+                    </div>            
 
                     <label for="dia">Selecione o dia</label>
-                <select class="form-control" name="dia" id="dia">
-                    <option value="">Selecione o dia</option>
-                    <script>
+                    <select class="form-control" name="dia" id="dia">
+                        <option value="">Selecione o dia</option>
+                        <script>
+    
+                            var semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+    
+                            function dataAtualFormatada(data){
+                                var data = data,
+                                    dia  = data.getDate().toString(),
+                                    diaF = (dia.length == 1) ? '0'+dia : dia,
+                                    mes  = (data.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+                                    mesF = (mes.length == 1) ? '0'+mes : mes,
+                                    diaSemana = semana[data.getDay()],
+                                    anoF = data.getFullYear();
+                                return diaSemana + ', ' + diaF+"/"+mesF+"/"+anoF;
+                            }
 
-                        var semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+                            function imprime_option(data) {                                
+                                document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
+                            }
 
-                        function dataAtualFormatada(data){
-                            var data = data,
-                                dia  = data.getDate().toString(),
-                                diaF = (dia.length == 1) ? '0'+dia : dia,
-                                mes  = (data.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
-                                mesF = (mes.length == 1) ? '0'+mes : mes,
-                                diaSemana = semana[data.getDay()],
-                                anoF = data.getFullYear();
-                            return diaSemana + ', ' + diaF+"/"+mesF+"/"+anoF;
-                        }
+                            var data = new Date();
+                            //document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
+                            
+                            for (i=0; i<=10; i++) {                                
+                                data.setDate(data.getDate()+1);
+                                //if ((data.getDay()>0) && (data.getDay()<6)) {  //tira sabado e domingo
+                                if (data.getDay()>0) {  //tira domingo
+                                    imprime_option(data);
+                                }
+                            }
+    
+                        
+                        </script>
+                    </select>
+    
 
-                        var data = new Date();
-                        //document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
+                    <div id='form'></div>
+                
+                                    
+                </form>
 
-                        data.setDate(data.getDate()+1);
-                        document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
-
-                        data.setDate(data.getDate()+1);
-                        document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
-
-                        data.setDate(data.getDate()+1);
-                        document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
-
-                        data.setDate(data.getDate()+1);
-                        document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');
-
-                        data.setDate(data.getDate()+1);
-                        document.write('<option value="'+data.getFullYear()+'-'+(data.getMonth()+1).toString()+'-'+data.getDate()+'">'+ dataAtualFormatada(data) +'</option>');                                                
                     
-                    </script>
-                </select>
-                <div id='form'></div>
-                    
-
                 </div>
                 <div class="col-sm-6">
                     <div class="promo-block-img-wrap">
@@ -138,27 +158,16 @@
                 if($(this).val()=='') {
                     $('#form').html('');
                 }
+                //alert($(this).val());
                 $.getJSON("https://script.google.com/macros/s/AKfycbxv9uTrRCh068GaYchh3t4qDi43s5SakaXFe1BCzqKqQQ8qHioB/exec", { data: $(this).val() }, function (data) {
 
-                    var form = '<form action="https://formspree.io/joaofelipern@gmail.com" method="POST">';
-
-                    // <input type="hidden" name="_subject" value="Agendamento de Horário" />
-                    // <input type="hidden" name="_language" value="pt-BR" />
-                    // <input type="hidden" name="_format" value="plain" />
-                    // <input type="hidden" name="_next" value="http://www.psicologaligiaarraes.com.br/mensagem_enviada.html" />
-
-                    form = form + '<br/><label>Selecione o horário</label><br/>';
+                    form = '<br/><label>Selecione o horário</label><br/>';
                     $.each(data, function (i, item) {
                         //console.log(item);
-                        form = form + '<input type="radio" name=' + item.toString() + '>' + item.toString().split('-')[3] + '</input><br/>';
+                        form = form + '<input type="radio" name="horario" value=' + item.toString().split('-')[3] + '> <strong>' + item.toString().split('-')[3] + '</strong></input><br/>';
                     });
-                    //console.log(data);
-                    form = form + '<br/><input class="btn btn-success mb-2" type="submit" value="Agendar">';
-                    form = form + '</form>';
-                    //alert(form);
-
+                    form = form + '<br /><input class="btn btn-success mb-2" type="submit" value="Agendar">';
                     $('#form').html(form);
-
                 });        
             });        
         });
@@ -182,7 +191,13 @@
         })();
     </script>
     <!-- /WhatsHelp.io widget -->
-  
+    <script src="js/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.telefone').mask('(00) 00000-0000');
+        });  
+    </script>        
+
 
   </body>
 </html>
