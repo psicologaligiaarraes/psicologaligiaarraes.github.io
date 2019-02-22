@@ -120,8 +120,8 @@
                             
                             for (i=0; i<=10; i++) {                                
                                 data.setDate(data.getDate()+1);
-                                //if ((data.getDay()>0) && (data.getDay()<6)) {  //tira sabado e domingo
-                                if (data.getDay()>0) {  //tira domingo
+                                //if (data.getDay()>0) {  //tira apenas domingo
+                                if ((data.getDay()>0) && (data.getDay()<6)) {  //tira sabado e domingo                                
                                     imprime_option(data);
                                 }
                             }
