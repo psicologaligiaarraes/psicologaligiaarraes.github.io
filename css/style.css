@@ -38,3 +38,6 @@ h1 {
     color: #eee;
     text-shadow: 1px 1px 3px black, 0 0 25px #78C2AD, 0 0 5px #888;
 }
+.form-control {
+    margin-bottom: 2px;
+}
