@@ -41,3 +41,27 @@ h1 {
 .form-control {
     margin-bottom: 2px;
 }
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+    list-style: none;
+    margin-left: -20px;
+    }
+    
+    .glyphicon {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    width: 50px;
+    margin-right: 10px;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    }
+    
+    .inactive { 
+        color: #ccc;
+        background-color: #fafafa;
+    } 
