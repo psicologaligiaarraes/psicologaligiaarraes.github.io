@@ -186,7 +186,7 @@
 
 
                             <label for="dia">Selecione o dia</label>
-                            <select class="form-control" name="dia" id="dia">
+                            <select class="form-control" name="dia" id="dia" required>
                                 <option value="">Selecione o dia</option>
                                 <script>
 
@@ -222,13 +222,14 @@
                                 </script>
                             </select>
 
-                            <!-- <div class="someSpinnerImage" style="display:none;"> -->
-                            <div class="someSpinnerImage">
+                            <div class="someSpinnerImage" style="display:none;">
+                            <!-- <div class="someSpinnerImage"> -->
                                 <div class="spinner-border text-success" role="status">
                                     <span class="sr-only">Carregando...</span>
                                 </div>
                             </div>
                             <div id='form'></div>
+                            <br /><input class="btn btn-success w-100" type="submit" value="Concluir">                            
                             <br>
                             <!-- <button class="btn w-100" id="botao" disabled>Passo 4: Finalizar</button> -->
                         </div>
@@ -274,7 +275,7 @@
                         //console.log(item);
                         form = form + '<input type="radio" name="horario" value=' + item.toString().split('-')[3] + '> <strong>' + item.toString().split('-')[3] + '</strong></input><br/>';
                     });
-                    form = form + '<br /><input class="btn btn-success w-100" type="submit" value="Concluir">';
+                    //form = form + '<br /><input class="btn btn-success w-100" type="submit" value="Concluir">';
                     $('#form').html(form);
                     $('#form').show();
                     $(".someSpinnerImage").hide();
