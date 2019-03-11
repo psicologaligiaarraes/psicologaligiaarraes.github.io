@@ -137,35 +137,46 @@
 
                           <h3>Escolha a forma de pagamento</h3>
 
-                          <p>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseDeposito" role="button" aria-expanded="false" aria-controls="collapseDeposito">
-                              Depósito ou Transferência
-                            </a>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                              Boleto ou Cartão
-                            </a>
-                            <br>
-                          </p>
-                          <div class="collapse" id="collapseDeposito">
+
+
+                          <div class="form-group">
+                            <!-- <label class="label-contato" for="forma-pagamento">Forma de Pagamento</label>                             -->
+                            <select name="forma-pagamento" id="forma-pagamento" required class="form-control form-control-lg">
+                                <option value="">Selecione uma opção</option>
+                                <option value="Deposito-Transferencia">Depósito ou Transferência Bancária</option>
+                                <option value="PagSeguro">Boleto</option>
+                                <option value="PagSeguro">Cartão (Débito ou Crédito em até 12X)</option>
+                            </select>
+                        </div>
+
+
+
+
+                          <div class="collapse" id="Deposito-Transferencia">
                             <div class="card text-center">
                               <div class="card-header">
-                                Opção 1: Pagamento por Transferência Bancária
+                                Pagamento por Depósito ou Transferência Bancária
                               </div>
                               <div class="card-body">
                                 <!-- <h5 class="card-title">Pagamento por Transferência Bancária</h5> -->
                                 <p class="card-text">Você receberá um e-mail com os dados da conta para depósito ou transferência bancária.</p>
+                                <p>Clique no link abaixo para escolher um horário de atendimento.</p>
                                 <!-- <a href="/" class="btn btn-primary">Voltar ao site</a> -->
                               </div>
                               <!-- <div class="card-footer text-muted">
                                 * Banco do Brasil
                               </div> -->
+
+                              <a href="marcar-horario" class="btn btn-primary w-100">Escolha um horário</a> 
+                              <br><br>
+    
                             </div>  
                           </div>
-                          <div class="collapse" id="collapseExample">
+                          <div class="collapse" id="PagSeguro">
 
                             <div class="card text-center">
                               <div class="card-header">
-                                Opção 2: Pagamento por Boleto ou Cartão
+                                Pagamento por Boleto ou Cartão
                               </div>
                               <div class="card-body">
                               <!-- <h5 class="card-title">Pagamento por Boleto ou Cartão</h5> -->
@@ -190,29 +201,13 @@
                                 * Parcelamento em até 12x
                               </div>
                             </div>
-  
-                          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                          
+                            * Depois de pagar, você será redirecionado para a página para escolher o horário do atendimento.
+                            <!-- <a href="marcar-horario" class="btn btn-primary w-100">Escolha um horário</a>  -->
+                            <br><br>
 
                           <!-- <p>Depois de transferir ou pagar pelo PagSeguro, clique no link abaixo para escolher um horário.</p> -->
-                          <a href="marcar-horario" class="btn btn-primary w-100">Escolha um horário</a> 
-                          <br><br>
-
+                            </div>
                         </div>
                         <br>
                         <br>
@@ -256,6 +251,15 @@
       })();
   </script> -->
   <!-- /WhatsHelp.io widget -->
+
+  <script>                        
+      $('#forma-pagamento').change(function(){ 
+        var tipo = $(this).val();
+        $('.collapse').hide('slow');
+        $('#'+tipo).show('slow');
+      })
+    </script>
+
 
   </body>
 </html>
