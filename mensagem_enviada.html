@@ -138,77 +138,84 @@
                           <h3>Escolha a forma de pagamento</h3>
 
 
+                          <!-- <div class="card-body"> -->
+                            <div>
 
-                          <div class="form-group">
-                            <!-- <label class="label-contato" for="forma-pagamento">Forma de Pagamento</label>                             -->
-                            <select name="forma-pagamento" id="forma-pagamento" required class="form-control form-control-lg">
-                                <option value="">Selecione uma opção</option>
-                                <option value="Deposito-Transferencia">Depósito ou Transferência Bancária</option>
-                                <option value="PagSeguro">Boleto/Cartão (até 12x)</option>
-                            </select>
-                        </div>
+                            <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active show text-left" data-toggle="pill" href="#nav-tab-card">
+                                <i class="fa fa-credit-card"></i> Boleto ou Cartão</a></li>
+                              <!-- <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                                <i class="fab fa-paypal"></i>  Paypal</a></li> -->
+                              <li class="nav-item">
+                                <a class="nav-link text-left" data-toggle="pill" href="#nav-tab-bank">
+                                <i class="fa fa-university"></i>  Transferência Bancária</a></li>
+                            </ul>
+                            
+                            <div class="tab-content">
+                            <div class="tab-pane fade active show" id="nav-tab-card">
+                              <!-- <p class="alert alert-success">Some text success or error</p> -->
 
+                              <div>
+                                
+                              <!-- <p class="alert alert-success">Clique em uma das imagens abaixo</p>  -->
+                              <p><strong>Clique em uma das imagens abaixo:</strong></p> 
 
-
-
-                          <div class="collapse" id="Deposito-Transferencia">
-                            <div class="card text-center">
-                              <div class="card-header">
-                                Transferência ou Depósito
-                              </div>
-                              <div class="card-body">
-                                <!-- <h5 class="card-title">Pagamento por Transferência Bancária</h5> -->
-                                <p class="card-text">Verifique os dados de pagamento no seu e-mail.</p>
-                                <!-- <p>Clique no link abaixo para confirmar seus dados e escolher um horário de atendimento.</p> -->
-                                <!-- <a href="/" class="btn btn-primary">Voltar ao site</a> -->
-                              </div>
-                              <!-- <div class="card-footer text-muted">
-                                * Banco do Brasil
-                              </div> -->
-
-                              <a href="marcar-horario" class="btn btn-primary w-100">Clique para escolher um horário</a> 
-                              <br><br>
-    
-                            </div>  
-                          </div>
-                          <div class="collapse" id="PagSeguro">
-
-                            <div class="card text-center">
-                              <div class="card-header">
-                                Boleto ou Cartão (até 12x)
-                              </div>
-                              <div class="card-body">
-                              <!-- <h5 class="card-title">Pagamento por Boleto ou Cartão</h5> -->
-                                <!-- <p class="card-text">Boleto ou cartão de crédito. Escolha a quantidade de sessões e clique na imagem do PagSeguro</p> -->
-                                <p class="card-text">Clique em uma das imagens abaixo:</p>
   
-                                          <p><strong>1 sessão: R$50,00</strong>
-                                            <br>
-                                            <a href="https://pag.ae/7UBQTi4w5" target="_blank"><img class="right-text" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
-                                            <!-- <br>
-                                          2 sessões: R$95,00 <a href="https://pag.ae/7UBQTv4Vq" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
-                                            <br>
-                                          3 sessões: R$140,00 <a href="https://pag.ae/7UBQTDzeq" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
-                                            -->
-                                            <br>
-                                            <br>
-                                          <strong>4 sessões: R$180,00 </strong>
-                                          <br>
-                                          <a href="https://pag.ae/7UBQTRHS4" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
-                                            <!-- <br>
-                                          10 sessões: R$450,00 <a href="https://pag.ae/7UBQUanep" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a></p>
-                                           -->
-  
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                              <p><strong>1 sessão: R$50,00</strong>
+                                <br>
+                                <a href="https://pag.ae/7UBQTi4w5" target="_blank"><img class="right-text" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
+                                <!-- <br>
+                              2 sessões: R$95,00 <a href="https://pag.ae/7UBQTv4Vq" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
+                                <br>
+                              3 sessões: R$140,00 <a href="https://pag.ae/7UBQTDzeq" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
+                                -->
+                                <br>
+                                <br>
+                              <strong>4 sessões: R$180,00 </strong>
+                              <br>
+                              <a href="https://pag.ae/7UBQTRHS4" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
+                                <!-- <br>
+                              10 sessões: R$450,00 <a href="https://pag.ae/7UBQUanep" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a></p>
+                               -->
+
                               </div>
-                              <!-- <div class="card-footer text-muted">
-                                * Parcelamento em até 12x
-                              </div> -->
+
+
+                            </div> <!-- tab-pane.// -->
+                            <div class="tab-pane fade" id="nav-tab-paypal">
+                            <p>Paypal is easiest way to pay online</p>
+                            <p>
+                            <button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Log in my Paypal </button>
+                            </p>
+                            <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. </p>
                             </div>
-                          
-                            <!-- * Depois de pagar, você será redirecionado para a página para escolher o horário do atendimento. -->
-                            <!-- <a href="marcar-horario" class="btn btn-primary w-100">Escolha um horário</a>  -->
-                            <br><br>
+                            <div class="tab-pane fade" id="nav-tab-bank">
+                            <p><strong>Nota:</strong> Os dados de pagamento serão enviados no seu e-mail.</p>
+                            <!-- <dl class="param">
+                              <dt>BANK: </dt>
+                              <dd> THE WORLD BANK</dd>
+                            </dl>
+                            <dl class="param">
+                              <dt>Accaunt number: </dt>
+                              <dd> 12345678912345</dd>
+                            </dl>
+                            <dl class="param">
+                              <dt>IBAN: </dt>
+                              <dd> 123456789</dd>
+                            </dl>
+                            <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. </p> -->
+                            <a href="marcar-horario" class="btn btn-primary w-100">Escolher um horário</a> 
+                            </div> <!-- tab-pane.// -->
+                            </div> <!-- tab-content .// -->
+                            
+                            </div>
+
+
+
 
                           <!-- <p>Depois de transferir ou pagar pelo PagSeguro, clique no link abaixo para escolher um horário.</p> -->
                             </div>
