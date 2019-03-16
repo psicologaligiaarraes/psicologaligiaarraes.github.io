@@ -270,7 +270,7 @@
                 $.getJSON("https://script.google.com/macros/s/AKfycbxv9uTrRCh068GaYchh3t4qDi43s5SakaXFe1BCzqKqQQ8qHioB/exec", { data: $(this).val() }, function (data) {
 
                     form = '<br/><label>Selecione o horário</label><br/>';
-                    form = form + '<p class="alert alert-secondary">Este formulário segue o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>';
+                    form = form + '<p class="alert alert-secondary">Selecione seguindo o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>';
                     $.each(data, function (i, item) {
                         //console.log(item);
                         form = form + '<input type="radio" name="horario" value=' + item.toString().split('-')[3] + '> <strong>' + item.toString().split('-')[3] + '</strong></input><br/>';
