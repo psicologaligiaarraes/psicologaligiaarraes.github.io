@@ -152,11 +152,9 @@
 
 
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6">                            
 
-                            <p class="alert alert-secondary">Este formulário segue o horário de Campo Grande-MS (UTC/GMT -4) que é uma
-                                hora a menos que o horário de Brasilia.</p>
-
+                            <h1>Confirme seus dados e escolha um horário</h1>
 
                             <div class="form-group">
                                 <label class="label-contato" for="nome">Nome</label>
@@ -272,11 +270,11 @@
                 $.getJSON("https://script.google.com/macros/s/AKfycbxv9uTrRCh068GaYchh3t4qDi43s5SakaXFe1BCzqKqQQ8qHioB/exec", { data: $(this).val() }, function (data) {
 
                     form = '<br/><label>Selecione o horário</label><br/>';
+                    form = form + '<p class="alert alert-secondary">Este formulário segue o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>';
                     $.each(data, function (i, item) {
                         //console.log(item);
                         form = form + '<input type="radio" name="horario" value=' + item.toString().split('-')[3] + '> <strong>' + item.toString().split('-')[3] + '</strong></input><br/>';
-                    });
-                    //form = form + '<br /><input class="btn btn-success w-100" type="submit" value="Concluir">';
+                    });                    
                     $('#form').html(form);
                     $('#form').show();
                     $(".someSpinnerImage").hide();
