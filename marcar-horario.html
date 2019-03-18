@@ -361,9 +361,9 @@
         });  
     </script>
     <script>
-        // document.getElementById("nome").value = localStorage.nome;
-        // document.getElementById("email").value = localStorage.email;
-        // document.getElementById("telefone").value = localStorage.telefone;
+        if(localStorage.nome != undefined) document.getElementById("nome").value = localStorage.nome;
+        if(localStorage.email != undefined) document.getElementById("email").value = localStorage.email;
+        if(localStorage.telefone != undefined) document.getElementById("telefone").value = localStorage.telefone;
     </script>
 
 
