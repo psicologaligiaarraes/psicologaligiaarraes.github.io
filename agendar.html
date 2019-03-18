@@ -368,6 +368,11 @@
                     $('.telefone').mask('(00) 00000-0000');
                   });  
                 </script>
+                <script>
+                    $("#nome").change(function() { localStorage.nome=$(this).val(); });                
+                    $("#email").change(function() { localStorage.email=$(this).val(); });                
+                    $("#telefone").change(function() { localStorage.telefone=$(this).val(); });                
+                </script>
 
     </body>
 </html>
