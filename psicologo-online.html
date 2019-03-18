@@ -351,7 +351,7 @@
             <input id="nome" type="text" class="form-control" required name="nome" placeholder="Informe seu nome" />                                                    
           </div>
           <div class="col-md-3">
-            <input id="contato" type="email" class="form-control" required name="email" placeholder="Informe seu e-mail">
+            <input id="email" type="email" class="form-control" required name="email" placeholder="Informe seu e-mail">
           </div>
           <div class="col-md-3">
             <input id="telefone" type="tel" class="form-control telefone" name="telefone" required placeholder="Telefone (XX) XXXXX-XXXX">
@@ -466,6 +466,10 @@
             $('.telefone').mask('(00) 00000-0000');
             });  
         </script>        
-
+        <script>
+            $("#nome").change(function() { localStorage.nome=$(this).val(); });                
+            $("#email").change(function() { localStorage.email=$(this).val(); });                
+            $("#telefone").change(function() { localStorage.telefone=$(this).val(); });                
+        </script>
         </body>
       </html>
