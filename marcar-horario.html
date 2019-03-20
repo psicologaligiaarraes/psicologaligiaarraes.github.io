@@ -274,11 +274,14 @@
                 $(".someSpinnerImage").show();
                 $.getJSON("https://script.google.com/macros/s/AKfycbxv9uTrRCh068GaYchh3t4qDi43s5SakaXFe1BCzqKqQQ8qHioB/exec", { data: $(this).val() }, function (data) {
 
-                    form = '<br/><label>Selecione o horário</label><br/>';
-                    form = form + '<p class="alert alert-secondary">Selecione seguindo o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>';
+                    form = '<br/><label>Selecione o horário <span style="color:#F3969A;"><small><strong>* Horário de Brasilia</strong></small></span></label><br/>';
+                    // form = form + '<p class="alert alert-secondary">Selecione seguindo o horário de Campo Grande-MS (UTC/GMT -4) que é uma hora a menos que o horário de Brasilia.</p>';
                     $.each(data, function (i, item) {
-                        //console.log(item);
-                        form = form + '<input type="radio" name="horario" value=' + item.toString().split('-')[3] + '> <strong>' + item.toString().split('-')[3] + '</strong></input><br/>';
+                        var hora = item.toString().split('-')[3];
+                        var horaCG = parseInt(hora.split(':')[0]);
+                        var horaBrasilia = parseInt(hora.split(':')[0]) + 1 + ':00';
+                        form = form + '<input type="radio" name="horario" value="CG ' + hora + ' - Brasilia ' + horaBrasilia + '"> <strong>' + horaBrasilia + '</strong></input><br/>';
+
                     });                    
                     $('#form').html(form);
                     $('#form').show();
