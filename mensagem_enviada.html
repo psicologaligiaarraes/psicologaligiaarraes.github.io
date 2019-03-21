@@ -146,35 +146,31 @@
 
                             <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
                               <li class="nav-item">
-                                <a class="nav-link show text-left" data-toggle="pill" href="#nav-tab-card">
-                                <i class="fa fa-credit-card"></i> Boleto ou Cartão</a></li>
-                              <!-- <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
-                                <i class="fab fa-paypal"></i>  Paypal</a></li> -->
+                                <a class="nav-link active show text-left" data-toggle="pill" href="#nav-tab-card">
+                                <i class="fa fa-credit-card"></i> Cartão</a></li>
+                              <li class="nav-item">
+                                <a class="nav-link text-left" data-toggle="pill" href="#nav-tab-boleto">
+                                <i class="fa fa-barcode" aria-hidden="true"></i> Boleto</a></li>
                               <li class="nav-item">
                                 <a class="nav-link text-left" data-toggle="pill" href="#nav-tab-bank">
                                 <i class="fa fa-university"></i>  Transferência Bancária</a></li>
                             </ul>
                             
                             <div class="tab-content">
-                            <div class="tab-pane fade show" id="nav-tab-card">
+                            <div class="tab-pane fade active show" id="nav-tab-card">
                               <!-- <p class="alert alert-success">Some text success or error</p> -->
 
                               
                                 
                               <!-- <p class="alert alert-success">Clique em uma das imagens abaixo</p>  -->
-                              <p>Clique em uma das imagens abaixo para pagar com boleto ou cartão (em até 12X).</p> 
+                              <p>Clique em uma das imagens abaixo para pagar com cartão de crétido (em até 12X).</p> 
 
                               <div class="text-center">                                
                               <p><strong>1 sessão: R$50,00</strong>
                                 <br>
                                 <!-- <a href="https://pag.ae/7UBQTi4w5" target="_blank"><img class="right-text" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-assina.gif" alt=""></a> -->
 
-                                <a mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=417662376-bd660148-1471-405e-a196-196918fcd60b" name="MP-payButton" class='blue-ar-m-rn-brall'>Pagar</a>
-                                <script type="text/javascript">
-                                (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                </script>
-                                </p>
+                                <a class="btn btn-info" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=417662376-1cfd3ad2-b795-4b19-af07-ede3d59d8188">Pagar</a>
                                 <!-- <br>
                               2 sessões: R$95,00 <a href="https://pag.ae/7UBQTv4Vq" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a>
                                 <br>
@@ -184,19 +180,33 @@
                                 <p>
                               <strong>4 sessões: R$180,00 </strong>
                               <br>
-                              <a mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=417662376-dcdd8ddd-377b-460f-ba73-ba1997ce6891" name="MP-payButton" class='blue-ar-m-rn-brall'>Pagar</a>
-                              <script type="text/javascript">
-                              (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                              </script>                              
+                                <a class="btn btn-info" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=417662376-e3175f37-1c49-48db-9cbc-cdeeaa6c4fe7">Pagar</a>
                               <!-- <a href="https://pag.ae/7UBQTRHS4" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-assina.gif" alt=""></a> -->
                                 <!-- <br>
                               10 sessões: R$450,00 <a href="https://pag.ae/7UBQUanep" target="_blank"><img src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/205x30-pagar-roxo.gif" alt=""></a></p>
                                -->
 
+                               <br>
+                               <p><small>* Pagamento processado pelo MercadoPago</small></p> 
                               </div>
-
+                              
 
                             </div> <!-- tab-pane.// -->
+                            <div class="tab-pane fade" id="nav-tab-boleto">
+                              <p>Clique em uma das imagens abaixo para pagar com boleto.</p> 
+
+                              <div class="text-center">                                
+                              <p><strong>1 sessão: R$50,00</strong>
+                                <br>
+                                <!-- <a href="https://pag.ae/7UBQTi4w5" target="_blank"><img class="right-text" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-assina.gif" alt=""></a> -->
+
+                                <a class="btn btn-info" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=417662376-a2b1784c-c935-4458-a3ce-fe9cb71c40be">Pagar</a>
+                              
+                                <br>
+                                <p><small>* Pagamento processado pelo MercadoPago</small></p>                          
+                              </div>  
+    
+                            </div>                        
                             <!-- <div class="tab-pane fade" id="nav-tab-paypal">
                             <p>Paypal is easiest way to pay online</p>
                             <p>
