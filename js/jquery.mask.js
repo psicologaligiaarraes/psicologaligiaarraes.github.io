@@ -1,5 +1,5 @@
 /**
- * jquery.mask.js
+ * jquery.mask.min.js
  * @version: v1.14.15
  * @author: Igor Escobar
  *
