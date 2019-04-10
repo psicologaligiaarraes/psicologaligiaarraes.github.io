@@ -176,11 +176,11 @@
                                 <input id="telefone" type="text" class="form-control telefone" name="telefone" required>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" id="campo-forma-pagamento">
                                 <label class="label-contato" for="forma-pagamento">Forma de Pagamento</label>
                                 <span style="color:#F3969A;"><small><strong>* Informe a forma de pagamento
                                             escolhida?</strong></small></span>
-                                <select name="forma-pagamento" id="forma-pagamento" required class="form-control">
+                                <select name="forma-pagamento" id="forma-pagamento" class="form-control">
                                     <option value="">Selecione uma opção</option>
                                     <option value="Deposito">Depósito</option>
                                     <option value="Transferencia">Transferência Bancária</option>
@@ -257,7 +257,7 @@
     </div>
     <br>
     <!-- <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="js/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -293,10 +293,6 @@
             });
         });
     </script>
-
-
-
-
 
 
     <!-- <footer class="bg-light">
@@ -370,6 +366,20 @@
         if (sessionStorage.nome != undefined) document.getElementById("nome").value = sessionStorage.nome;
         if (sessionStorage.email != undefined) document.getElementById("email").value = sessionStorage.email;
         if (sessionStorage.telefone != undefined) document.getElementById("telefone").value = sessionStorage.telefone;
+    </script>
+    <script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function (m, key, value) {
+                    vars[key] = value;
+                });
+            return vars;
+        }        
+        if (getUrlVars()['pagamento'] == 'transferencia') {
+            $('#forma-pagamento').val('Transferencia');
+            $('#campo-forma-pagamento').hide()
+        }
     </script>
 
 
