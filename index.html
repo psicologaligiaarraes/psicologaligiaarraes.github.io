@@ -1099,13 +1099,11 @@
       <div class="carousel-item active" style="background-image: url('img/atendimento-online.webp')">
         <div class="carousel-caption d-md-block">
           <div class="carousel-texto">
-            <a href="https://www.psicologaligiaarraes.com.br/psicologo-online">
-              <h3 class="titulo">Atendimento Online</h3>
-            </a>
+            <h3 class="titulo">Atendimento Online</h3>
             <!-- <p class="lead d-none d-lg-block">Seja atendido online, sem precisar ir até o consultório</p> -->
             <!-- <a href="https://www.psicologaligiaarraes.com.br/psicologo-online" class="btn btn-primary"><strong>Saiba mais</strong></a> -->
             <!-- <a href="psicologo-online?source=banner" class="btn btn-light"><strong>SAIBA MAIS</strong></a> -->
-            <a href="agendar?source=banner" class="btn btn-success"><strong>AGENDAR ATENDIMENTO</strong></a>
+            <a href="agendar?source=banner" style="cursor: pointer; text-decoration: none;" class="btn btn-success"><strong>AGENDAR ATENDIMENTO</strong></a>
           </div>
         </div>
       </div>
@@ -1113,11 +1111,9 @@
       <div class="carousel-item" style="background-image: url('img/pense-magro.webp')">
         <div class="carousel-caption d-md-block">
           <div class="carousel-texto">
-            <a href="https://www.psicologaligiaarraes.com.br/pense-magro">
-              <h3 class="titulo">Projeto Pense Magro</h3>
-            </a>
+            <h3 class="titulo">Projeto Pense Magro</h3>
             <!-- <p class="lead d-none d-lg-block">Emagrecer sem dietas restritivas, baseado no comportamento alimentar</p>  -->
-            <a href="https://www.psicologaligiaarraes.com.br/pense-magro" class="btn btn-success"><strong>SAIBA MAIS</strong></a>
+            <a href="https://www.psicologaligiaarraes.com.br/pense-magro" style="cursor: pointer; text-decoration: none;" class="btn btn-success"><strong>SAIBA MAIS</strong></a>
           </div>
         </div>
       </div>
@@ -1125,11 +1121,11 @@
 
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Anterior</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Próximo</span>
     </a>
   </div>
   <div class="bg-primary" style="height:4px;"></div>
@@ -1293,13 +1289,38 @@
     </div>
   </footer>
 
+
+  <style>
+    .footer-fixo {
+        position: fixed !important;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }  
+  </style>
+  <br>
+  <br>
+  <div class="footer-fixo bg-primary text-center">
+    <link-item tabindex="0">
+      <a style="cursor: pointer; text-decoration: none;" target="_blank" href="https://www.psicologaligiaarraes.com.br/agendar?link=rodape">
+        <div class="container">
+          <div class="title-content" style="padding: 15px 0 0px 0;">
+            <p class="text-light"><strong><i class="far fa-calendar-check"></i> Marcar atendimento online <i class="fas fa-long-arrow-alt-right"></i></i></strong></p>
+          </div>
+        </div>
+      </a>
+    </link-item>
+  </div>
+
+
   </div>
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <!-- <script src="js/popper.min.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
 
   <!-- WhatsHelp.io widget -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     (function () {
       var options = {
         facebook: "1999990686932284", // Facebook page ID
@@ -1314,7 +1335,7 @@
       s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
       var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
-  </script>
+  </script> -->
   <!-- /WhatsHelp.io widget -->
 
   <script src="js/jquery.mask.min.js"></script>
