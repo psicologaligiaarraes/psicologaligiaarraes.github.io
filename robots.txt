@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /mensagem_enviada.html
 Disallow: /solicitacao-horario.html
+Disallow: /atendimento-presencial.html
 Sitemap: https://www.psicologaligiaarraes.com.br/sitemap.xml
